@@ -23,11 +23,12 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GHCR_TOKEN }}
+          password: ${{ secrets.GHCR_TOKEN }} # Si secrets.GITHUB_TOKEN (natif/autogénéré) ne suffit pas
 
       - name: Build and push de l'image
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
+          # Bien penser à préciser le préfixe "ghcr.io/<utilisateur | organisation>"
           tags: ghcr.io/gauthierwebdev/node-ci-cd:prod
