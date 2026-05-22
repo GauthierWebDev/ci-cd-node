@@ -30,4 +30,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/node-ci-cd:prod
+          tags: ghcr.io/gauthierwebdev/node-ci-cd:prod
