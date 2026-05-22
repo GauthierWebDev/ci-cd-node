@@ -21,7 +21,7 @@ jobs:
       - name: Login au GHCR
         uses: docker/login-action@v4
         with:
-          registry: gchr.io
+          registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
